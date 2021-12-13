@@ -14,7 +14,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "QWERTY";
+                        label = "WORKMAN";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  D  |  R  |  W  |  B  |   |  J  |  F   |  U  |  P  |  ;  | BKSP |
 // | CTRL |  A  |  S  |  H  |  T  |  G  |   |  Y  |  N   |  E  |  O  |  I  |  '   |
