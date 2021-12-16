@@ -26,7 +26,7 @@
                 compatible = "zmk,behavior-mod-morph";
                 label = "BRACES";
                 #binding-cells = <0>;
-                bindings = <&kp LBRC>, <&kp RBRC>;
+                bindings = <&kp LBRC>, <&kp RBKT>; // ] + shift = }
                 mods = <(MOD_LSFT)>;
             };
             brkts: brkts {
