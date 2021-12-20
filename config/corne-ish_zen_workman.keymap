@@ -44,15 +44,15 @@
                 lower_layer {
                         label = "Symbol";
 // -----------------------------------------------------------------------------------------
-// | ESC  |   | # | * | LBRC | RBRC |   | MINUS |  7  |  8  |  9  |      | DEL |
-// | TAB  | & | $ | ! | LPAR | RPAR |   |       |  4  |  5  |  6  |      | INS |
-// | CAPS | ^ | % | @ | LBKT | RBKT |   | EQUAL |  1  |  2  |  3  | BSLH |     |
-//               | GUI |      | ENT |   |  0  |     | ALT |
+// | ESC  | PIPE | # | * | LBRC | RBRC |   | MINUS |  7  |  8  |  9  |      | DEL |
+// | TAB  | &    | $ | ! | LPAR | RPAR |   |       |  4  |  5  |  6  |  0   | INS |
+// | CAPS | ^    | % | @ | LBKT | RBKT |   | EQUAL |  1  |  2  |  3  | BSLH |     |
+//                  | GUI |      | ENT |   |  0  |     | ALT |
                         bindings = <
-   &trans &none     &kp HASH  &kp ASTRK &kp LBRC &kp RBRC     &kp MINUS &kp N7   &kp N8 &kp N9 &none    &kp DEL
-   &trans &kp AMPS  &kp DLLR  &kp EXCL  &kp LPAR &kp RPAR     &none     &kp N4   &kp N5 &kp N6 &none    &kp INS
-   &trans &kp CARET &kp PRCNT &kp AT    &kp LBKT &kp RBKT     &kp EQUAL &kp N1   &kp N2 &kp N3 &kp BSLH &none
-                                   &trans    &trans &none     &kp N0     &trans   &trans
+   &trans &kp PIPE  &kp HASH  &kp ASTRK &kp LBRC &kp RBRC     &kp MINUS &kp KP_N7   &kp KP_N8 &kp KP_N9 &none     &kp DEL
+   &trans &kp AMPS  &kp DLLR  &kp EXCL  &kp LPAR &kp RPAR     &none     &kp KP_N4   &kp KP_N5 &kp KP_N6 &kp KP_N0 &kp INS
+   &trans &kp CARET &kp PRCNT &kp AT    &kp LBKT &kp RBKT     &kp EQUAL &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp BSLH  &none
+                                   &trans    &trans &none     &kp KP_N0     &trans   &trans
                         >;
                 };
 
