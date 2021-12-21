@@ -15,12 +15,14 @@
 
 / {
         behaviors {
-            parens: parentheses {
-                compatible = "zmk,behavior-mod-morph";
-                label = "PARENS";
-                #binding-cells = <0>;
-                bindings = <&kp LPAR>, <&kp RPAR>;
-                mods = <(MOD_LSFT)>;
+            hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping-term-ms = <150>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
             };
         };
 
@@ -36,7 +38,7 @@
 //            | GUI | LCTRL | LOWER/ENT |   | RAISE/SPC | LSHFT  | ALT |
                         bindings = <
    &kp ESC  &kp Q &kp D &kp R &kp W &kp B   &kp J &kp F  &kp U     &kp P   &kp SEMI &kp BSPC
-   &kp TAB  &kp A &kp S &kp H &kp T &kp G   &kp Y &kp N  &kp E     &kp O   &kp I    &kp SQT
+   &kp TAB  &hm LGUI A &hm LALT S &hm LSHFT H &hm LCTRL T &kp G   &kp Y &hm RCTRL N  &hm RSHFT E &hm RALT O &hm RGUI I &kp SQT
    &kp CAPS &kp Z &kp X &kp M &kp C &kp V   &kp K &kp L  &kp COMMA &kp DOT &kp FSLH &kp GRAVE
         &kp LGUI &kp LCTRL  &lt LOWER RET   &lt RAISE SPACE &kp LSHFT &kp RALT
                         >;
