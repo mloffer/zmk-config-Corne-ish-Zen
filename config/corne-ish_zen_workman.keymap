@@ -26,21 +26,21 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "LEFT_POSITIONAL_HOLD_TAP";
                 #binding-cells = <2>;
-                tapping-term-ms = <400>;
+                tapping-term-ms = <300>;
                 quick_tap_ms = <200>;
                 flavor = "balanced";
                 bindings = <&kp>, <&kp>;
-                hold-trigger-key-positions = RIGHT_HAND;
+                // hold-trigger-key-positions = RIGHT_HAND;
             };
             rhm: right_hand_mod {
                 compatible = "zmk,behavior-hold-tap";
                 label = "RIGHT_POSITIONAL_HOLD_TAP";
                 #binding-cells = <2>;
-                tapping-term-ms = <400>;
+                tapping-term-ms = <300>;
                 quick_tap_ms = <200>;
                 flavor = "balanced";
                 bindings = <&kp>, <&kp>;
-                hold-trigger-key-positions = LEFT_HAND;
+                // hold-trigger-key-positions = LEFT_HAND;
             };
         };
 
