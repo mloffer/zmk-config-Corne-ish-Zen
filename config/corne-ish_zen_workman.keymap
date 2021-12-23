@@ -13,33 +13,37 @@
 #define LOWER 1
 #define RAISE 2
 
+//  0  1  2  3  4  5     6  7  8  9 10 11
+// 12 13 14 15 16 17    18 19 20 21 22 23
+// 24 25 26 27 28 29    30 31 32 33 34 35
+//          36 37 38    39 40 41
+#define LEFT_HAND = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
+#define RIGHT_HAND = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
+
 / {
         behaviors {
             lhm: left_hand_mod {
                 compatible = "zmk,behavior-hold-tap";
                 label = "LEFT_POSITIONAL_HOLD_TAP";
                 #binding-cells = <2>;
-                tapping-term-ms = <250>;
-                quick_tap_ms = <150>;
-                flavor = "tap-unless-interrupted";
+                tapping-term-ms = <400>;
+                quick_tap_ms = <200>;
+                flavor = "balanced";
                 bindings = <&kp>, <&kp>;
-                hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
+                hold-trigger-key-positions = RIGHT_HAND;
             };
             rhm: right_hand_mod {
                 compatible = "zmk,behavior-hold-tap";
                 label = "RIGHT_POSITIONAL_HOLD_TAP";
                 #binding-cells = <2>;
-                tapping-term-ms = <250>;
-                quick_tap_ms = <150>;
-                flavor = "tap-unless-interrupted";
+                tapping-term-ms = <400>;
+                quick_tap_ms = <200>;
+                flavor = "balanced";
                 bindings = <&kp>, <&kp>;
-                hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
+                hold-trigger-key-positions = LEFT_HAND;
             };
         };
-//  0  1  2  3  4  5     6  7  8  9 10 11
-// 12 13 14 15 16 17    18 19 20 21 22 23
-// 24 25 26 27 28 29    30 31 32 33 34 35
-//          36 37 38    39 40 41
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -75,14 +79,14 @@
                 raise_layer {
                         label = "Control";
 // -----------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 | BT3 | F12 | none |   |     | PGUP |  UP  |  PGDN  |     |     |
-// | none  | F5  | F6  | F7  | F8  | none |   |     | LEFT |  DN  |  RIGHT |     |     |
-// | SLEEP | F1  | F2  | F3  | F4  | none |   |     | HOME |      |  END   |     |     |
+// |   |   |   |  |  |   |     | PGUP |  UP  |  PGDN  |     |     |
+// | none  |   |   |   |   |  |   |     | LEFT |  DN  |  RIGHT |     |     |
+// | BTCLR | BT1 | BT2 | BT3 |   |  |   |     | HOME |      |  END   |     |     |
 //                      | GUI |     | ENT |   | SPC |      | ALT |
                         bindings = <
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp C_VOL_UP &none     &none &kp PG_UP &kp UP   &kp PG_DN &none &none
+   &none &none &none &none &kp C_VOL_UP &none              &none &kp PG_UP &kp UP   &kp PG_DN &none &none
    &none       &kp C_PREV &kp C_PP &kp C_NEXT &kp C_MUTE   &none            &none &kp LEFT  &kp DOWN &kp RIGHT &none &none
-   &kp C_SLEEP_MODE &none      &none    &none      &kp C_VOL_DN &none       &none &kp HOME  &none    &kp END   &none &none
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp C_VOL_DN &none       &none &kp HOME  &none    &kp END   &none &reset
                     	     &trans &trans   &kp RET     &none   &trans  &trans
                         >;
                 };

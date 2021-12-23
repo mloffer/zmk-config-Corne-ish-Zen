@@ -4,3 +4,7 @@ zephyr/
 modules/
 tools/
 .west/
+/.idea/.gitignore
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/zmk-config-Corne-ish-Zen.iml
