@@ -52,24 +52,24 @@
 // -----------------------------------------------------------------------------------------
 // | ESC  |  Q  |  D  |  R  |  W  |  B  |   |  J  |  F   |  U  |  P  |  ;  | BKSP |
 // | TAB  |  A  |  S  |  H  |  T  |  G  |   |  Y  |  N   |  E  |  O  |  I  |  '   |
-// | CAPS |  Z  |  X  |  M  |  C  |  V  |   |  K  |  L   |  ,  |  .  |  /  | GRAVE |
+// | CAPS |  Z  |  X  |  M  |  C  |  V  |   |  K  |  L   |  ,  |  .  |  /  | APP |
 //            | GUI | LCTRL | LOWER/ENT |   | RAISE/SPC | LSHFT  | ALT |
                         bindings = <
    &kp ESC  &kp Q &kp D &kp R &kp W &kp B   &kp J &kp F  &kp U     &kp P   &kp SEMI &kp BSPC
    &kp TAB  &lhm LGUI A &lhm LALT S &lhm LCTRL H &lhm LSHFT T &kp G   &kp Y &rhm RSHFT N  &rhm RCTRL E &rhm RALT O &rhm RGUI I &kp SQT
-   &kp CAPS &kp Z &kp X &kp M &kp C &kp V   &kp K &kp L  &kp COMMA &kp DOT &kp FSLH &kp GRAVE
+   &kp CAPS &kp Z &kp X &kp M &kp C &kp V   &kp K &kp L  &kp COMMA &kp DOT &kp FSLH &kp K_APP
         &kp LGUI &kp LCTRL  &lt LOWER RET   &lt RAISE SPACE &kp LSHFT &kp RALT
                         >;
                 };
                 lower_layer {
                         label = "Symbol";
 // -----------------------------------------------------------------------------------------
-// | ESC  | PIPE | # | * | LBRC | RBRC |   | MINUS |  7  |  8  |  9  |      | DEL |
-// | TAB  | &    | $ | ! | LPAR | RPAR |   |       |  4  |  5  |  6  |  0   | INS |
-// | CAPS | ^    | % | @ | LBKT | RBKT |   | EQUAL |  1  |  2  |  3  | BSLH |     |
+// | ESC  | ` | # | * | LBRC | RBRC |   | MINUS |  7  |  8  |  9  |      | DEL |
+// | TAB  | & | $ | ! | LPAR | RPAR |   |       |  4  |  5  |  6  |  0   | INS |
+// | CAPS | ^ | % | @ | LBKT | RBKT |   | EQUAL |  1  |  2  |  3  | BSLH |     |
 //                  | GUI |      | ENT |   |  0  |     | ALT |
                         bindings = <
-   &trans &kp PIPE  &kp HASH  &kp ASTRK &kp LBRC &kp RBRC     &kp MINUS &kp KP_N7   &kp KP_N8 &kp KP_N9 &none     &kp DEL
+   &trans &kp GRAVE  &kp HASH  &kp ASTRK &kp LBRC &kp RBRC     &kp MINUS &kp KP_N7   &kp KP_N8 &kp KP_N9 &none     &kp DEL
    &trans &kp AMPS  &kp DLLR  &kp EXCL  &kp LPAR &kp RPAR     &none     &kp KP_N4   &kp KP_N5 &kp KP_N6 &kp KP_N0 &kp INS
    &trans &kp CARET &kp PRCNT &kp AT    &kp LBKT &kp RBKT     &kp EQUAL &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp BSLH  &none
                                    &trans    &trans &none     &kp KP_N0     &trans   &trans
