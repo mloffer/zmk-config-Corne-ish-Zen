@@ -27,6 +27,10 @@
     quick_tap_ms = <200>;
 };
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
         behaviors {
             hm: homerow_mods {
@@ -59,10 +63,10 @@
 // | CAPS |  Z  |  X  |  M  |  C  |  V  |    |  K  |  L   |  ,  |  .  |  /  | APP  |
 //              | GUI | LCTRL | SYM/ENT |    | FUN/SPC | LSHFT  | ALT |
                         bindings = <
-   &kp ESC  &kp Q &kp D &kp R &kp W &kp B                          &kp J &kp F  &kp U     &kp P   &kp SEMI &kp BSPC
-   &kp TAB  &hm LGUI A &hm LALT S &hm LCTRL H &hm LSHFT T &kp G    &kp Y &hm RSHFT N  &hm RCTRL E &hm RALT O &hm RGUI I &kp INS
-   &kp CAPS &kp Z &kp X &kp M &kp C &kp V                          &kp K &kp L  &kp COMMA &kp DOT &kp FSLH &kp K_APP
-                                &kp LGUI &kp LCTRL  &lt SYM RET    &lt FUN SPACE &kp LSHFT &kp RALT
+   &kp ESC    &kp Q &kp D &kp R &kp W &kp B                          &kp J &kp F  &kp U     &kp P   &kp SEMI &kp BSPC
+   &kp TAB    &hm LGUI A &hm LALT S &hm LCTRL H &hm LSHFT T &kp G    &kp Y &hm RSHFT N  &hm RCTRL E &hm RALT O &hm RGUI I &kp INS
+   &caps_word &kp Z &kp X &kp M &kp C &kp V                          &kp K &kp L  &kp COMMA &kp DOT &kp FSLH &kp K_APP
+                                  &kp LGUI &kp LCTRL  &lt SYM RET    &lt FUN SPACE &kp LSHFT &kp RALT
                         >;
                 };
                 symbol_layer {
@@ -76,7 +80,7 @@
    &trans &kp GRAVE &kp HASH  &kp ASTRK &kp LBRC &kp RBRC     &kp MINUS &kp KP_N7   &kp KP_N8 &kp KP_N9 &none     &kp DEL
    &trans &kp AMPS  &kp DLLR  &kp EXCL  &kp LPAR &kp RPAR     &kp SQT   &kp KP_N4   &kp KP_N5 &kp KP_N6 &kp KP_N0 &trans
    &trans &kp CARET &kp PRCNT &kp AT    &kp LBKT &kp RBKT     &kp EQUAL &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp BSLH  &trans
-                                   &trans    &trans &trans     &lt FUN KP_N0     &trans   &trans
+                                  &trans    &trans &trans     &lt FUN KP_N0     &trans   &trans
                         >;
                 };
 
@@ -88,10 +92,10 @@
 // | CAPS | F1 | F2  | F3  | F4  | PREV |    | VOLDN | HOME |      |  END   |     | APP  |
 //                  | GUI | LCTRL | ENT |    |   | LSHFT | ALT |
                         bindings = <
-   &trans &kp F9 &kp F10 &kp F11 &kp F12 &kp C_NEXT    &kp C_VOL_UP &kp PG_UP &kp UP   &kp PG_DN &none &trans
-   &trans &kp F5 &kp F6  &kp F7  &kp F8  &kp C_PP      &kp C_MUTE   &kp LEFT  &kp DOWN &kp RIGHT &none &trans
-   &trans &kp F1 &kp F2  &kp F3  &kp F4  &kp C_PREV    &kp C_VOL_DN &kp HOME  &none    &kp END   &none &trans
-                            &trans &trans   &trans    &trans   &trans  &trans
+   &trans   &kp F9 &kp F10 &kp F11 &kp F12 &kp C_NEXT    &kp C_VOL_UP &kp PG_UP &kp UP   &kp PG_DN &none &trans
+   &trans   &kp F5 &kp F6  &kp F7  &kp F8  &kp C_PP      &kp C_MUTE   &kp LEFT  &kp DOWN &kp RIGHT &none &trans
+   &kp CAPS &kp F1 &kp F2  &kp F3  &kp F4  &kp C_PREV    &kp C_VOL_DN &kp HOME  &none    &kp END   &none &trans
+                               &trans &trans   &trans    &trans   &trans  &trans
                         >;
                 };
 
