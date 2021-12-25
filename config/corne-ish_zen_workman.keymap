@@ -1,7 +1,6 @@
 /*
 *
-* Copyright (c) 2021 Darryl deHaan
-* SPDX-License-Identifier: MIT
+* Micah Loffer <micah.loffer@protonmail.com>
 *
 */
 
@@ -10,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+// Layer aliases
 #define DEFAULT 0
 #define SYM 1
 #define FUN 2
@@ -28,6 +28,7 @@
     quick_tap_ms = <200>;
 };
 
+// todo: find out why this doesn't work once moving to a layer
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
 };
@@ -103,7 +104,7 @@
                 control_layer {
                         label = "Control";
 // -----------------------------------------------------------------------------------------
-// |  |  |  |  |  |  |    |       | RST | BOOT |     |     |     |
+// |  |  |  |  |  |  |    |       | RST | BOOT | OUT |     |     |
 // |  |  |  |  |  |  |    | BTCLR | BT1 | BT2  | BT3 | BT4 | BT5 |
 // |  |  |  |  |  |  |    |       |     |      |     |     |     |
 //     | GUI | LCTRL |    |    |   | LSHFT | ALT |
