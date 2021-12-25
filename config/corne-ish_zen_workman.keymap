@@ -10,8 +10,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define LOWER 1
-#define RAISE 2
+#define SYM 1
+#define CTL 2
 
 //  0  1  2  3  4  5     6  7  8  9 10 11
 // 12 13 14 15 16 17    18 19 20 21 22 23
@@ -22,7 +22,7 @@
 
 / {
         behaviors {
-            lhm: left_hand_mod {
+            hm: homerow_mods {
                 compatible = "zmk,behavior-hold-tap";
                 label = "LEFT_POSITIONAL_HOLD_TAP";
                 #binding-cells = <2>;
@@ -30,17 +30,6 @@
                 quick_tap_ms = <200>;
                 flavor = "balanced";
                 bindings = <&kp>, <&kp>;
-                // hold-trigger-key-positions = RIGHT_HAND;
-            };
-            rhm: right_hand_mod {
-                compatible = "zmk,behavior-hold-tap";
-                label = "RIGHT_POSITIONAL_HOLD_TAP";
-                #binding-cells = <2>;
-                tapping-term-ms = <300>;
-                quick_tap_ms = <200>;
-                flavor = "balanced";
-                bindings = <&kp>, <&kp>;
-                // hold-trigger-key-positions = LEFT_HAND;
             };
         };
 
@@ -51,32 +40,32 @@
                         label = "Workman";
 // -----------------------------------------------------------------------------------------
 // | ESC  |  Q  |  D  |  R  |  W  |  B  |   |  J  |  F   |  U  |  P  |  ;  | BKSP |
-// | TAB  |  A  |  S  |  H  |  T  |  G  |   |  Y  |  N   |  E  |  O  |  I  |  '   |
-// | CAPS |  Z  |  X  |  M  |  C  |  V  |   |  K  |  L   |  ,  |  .  |  /  | APP |
+// | TAB  |  A  |  S  |  H  |  T  |  G  |   |  Y  |  N   |  E  |  O  |  I  | INS  |
+// | CAPS |  Z  |  X  |  M  |  C  |  V  |   |  K  |  L   |  ,  |  .  |  /  | APP  |
 //            | GUI | LCTRL | LOWER/ENT |   | RAISE/SPC | LSHFT  | ALT |
                         bindings = <
    &kp ESC  &kp Q &kp D &kp R &kp W &kp B   &kp J &kp F  &kp U     &kp P   &kp SEMI &kp BSPC
-   &kp TAB  &lhm LGUI A &lhm LALT S &lhm LCTRL H &lhm LSHFT T &kp G   &kp Y &rhm RSHFT N  &rhm RCTRL E &rhm RALT O &rhm RGUI I &kp SQT
+   &kp TAB  &hm LGUI A &hm LALT S &hm LCTRL H &hm LSHFT T &kp G   &kp Y &hm RSHFT N  &hm RCTRL E &hm RALT O &hm RGUI I &kp INS
    &kp CAPS &kp Z &kp X &kp M &kp C &kp V   &kp K &kp L  &kp COMMA &kp DOT &kp FSLH &kp K_APP
-        &kp LGUI &kp LCTRL  &lt LOWER RET   &lt RAISE SPACE &kp LSHFT &kp RALT
+        &kp LGUI &kp LCTRL  &lt SYM RET   &lt CTL SPACE &kp LSHFT &kp RALT
                         >;
                 };
-                lower_layer {
+                symbol_layer {
                         label = "Symbol";
 // -----------------------------------------------------------------------------------------
-// | ESC  | ` | # | * | LBRC | RBRC |   | MINUS |  7  |  8  |  9  |      | DEL |
-// | TAB  | & | $ | ! | LPAR | RPAR |   |       |  4  |  5  |  6  |  0   | INS |
-// | CAPS | ^ | % | @ | LBKT | RBKT |   | EQUAL |  1  |  2  |  3  | BSLH |     |
-//                  | GUI |      | ENT |   |  0  |     | ALT |
+// | ESC  | ` | # | * | { | } |    | - |  7  |  8  |  9  |   | DEL |
+// | TAB  | & | $ | ! | ( | ) |    | ' |  4  |  5  |  6  | 0 | INS |
+// | CAPS | ^ | % | @ | [ | ] |    | = |  1  |  2  |  3  | \ | APP |
+//         | GUI |      | ENT |    |  0  |     | ALT |
                         bindings = <
-   &trans &kp GRAVE  &kp HASH  &kp ASTRK &kp LBRC &kp RBRC     &kp MINUS &kp KP_N7   &kp KP_N8 &kp KP_N9 &none     &kp DEL
-   &trans &kp AMPS  &kp DLLR  &kp EXCL  &kp LPAR &kp RPAR     &none     &kp KP_N4   &kp KP_N5 &kp KP_N6 &kp KP_N0 &kp INS
-   &trans &kp CARET &kp PRCNT &kp AT    &kp LBKT &kp RBKT     &kp EQUAL &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp BSLH  &none
+   &trans &kp GRAVE &kp HASH  &kp ASTRK &kp LBRC &kp RBRC     &kp MINUS &kp KP_N7   &kp KP_N8 &kp KP_N9 &none     &kp DEL
+   &trans &kp AMPS  &kp DLLR  &kp EXCL  &kp LPAR &kp RPAR     &kp SQT   &kp KP_N4   &kp KP_N5 &kp KP_N6 &kp KP_N0 &trans
+   &trans &kp CARET &kp PRCNT &kp AT    &kp LBKT &kp RBKT     &kp EQUAL &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp BSLH  &trans
                                    &trans    &trans &none     &kp KP_N0     &trans   &trans
                         >;
                 };
 
-                raise_layer {
+                control_layer {
                         label = "Control";
 // -----------------------------------------------------------------------------------------
 // |   |   |   |  |  |   |     | PGUP |  UP  |  PGDN  |     |     |
