@@ -29,3 +29,17 @@ To locate your firmware files...
 
 Your keyboard is now ready to use.
 
+# Workman Layout
+
+## Features
+### Homerow Mods
+GACS-style [homerow mods](https://precondition.github.io/home-row-mods) allow for one-handed
+* select-all
+* cut
+* copy
+* paste
+* undo
+* save
+
+### Navigation
+* One-handed arrow keys

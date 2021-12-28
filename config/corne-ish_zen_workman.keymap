@@ -23,7 +23,7 @@
 #define RIGHT_HAND <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>
 
 &lt {
-    // do not wait for keyup for layer tap to prevent accidental enter/space
+    // do not wait for keyup on layer tap to prevent accidental enter/space
     flavor = "hold-preferred";
     tapping-term-ms = <300>;
     quick_tap_ms = <200>;
@@ -76,13 +76,13 @@
                 symbol_layer {
                         label = "Symbol";
 // -----------------------------------------------------------------------------------------
-// | ESC  | ` | # | * | { | } |    | - |  7  |  8  |  9  |   | DEL |
-// | TAB  | & | $ | ! | ( | ) |    | ' |  4  |  5  |  6  | 0 | INS |
+// | ESC  | ` | # | * | { | } |    | ! |  7  |  8  |  9  |   | DEL |
+// | TAB  | & | ' | - | ( | ) |    | $ |  4  |  5  |  6  | 0 | INS |
 // | CAPS | ^ | % | @ | [ | ] |    | = |  1  |  2  |  3  | \ | APP |
 //          | GUI | LCTRL |   |    |  0  | LSHFT | ALT |
                         bindings = <
-   &trans &kp GRAVE &kp HASH  &kp ASTRK &kp LBRC &kp RBRC                           &kp MINUS &kp KP_N7   &kp KP_N8 &kp KP_N9 &none     &kp DEL
-   &trans &hm LGUI AMPS &hm LALT DLLR &hm LCTRL EXCL &hm LSHFT LPAR &kp RPAR        &kp SQT   &hm RSHFT KP_N4 &hm RCTRL KP_N5 &hm RALT KP_N6 &hm RGUI KP_N0 &trans
+   &trans &kp GRAVE &kp HASH  &kp ASTRK &kp LBRC &kp RBRC                           &kp EXCL &kp KP_N7   &kp KP_N8 &kp KP_N9 &none     &kp DEL
+   &trans &hm LGUI AMPS &hm LALT SQT &hm LCTRL MINUS &hm LSHFT LPAR &kp RPAR        &kp DLLR  &hm RSHFT KP_N4 &hm RCTRL KP_N5 &hm RALT KP_N6 &hm RGUI KP_N0 &trans
    &trans &kp CARET &kp PRCNT &kp AT    &kp LBKT &kp RBKT                           &kp EQUAL &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp BSLH  &trans
                                                         &trans    &trans &trans     &lt FUN KP_N0     &trans   &trans
                         >;
