@@ -43,3 +43,4 @@ GACS-style [homerow mods](https://precondition.github.io/home-row-mods) allow fo
 
 ### Navigation
 * One-handed arrow keys
+* One-handed volume

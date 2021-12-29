@@ -22,12 +22,12 @@
 #define LEFT_HAND <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>
 #define RIGHT_HAND <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>
 
-&lt {
-    // do not wait for keyup on layer tap to prevent accidental enter/space
-    flavor = "hold-preferred";
-    tapping-term-ms = <300>;
-    quick_tap_ms = <200>;
-};
+//&lt {
+//    // do not wait for keyup on layer tap to prevent accidental enter/space
+//    flavor = "balanced";
+//    tapping-term-ms = <300>;
+//    quick_tap_ms = <200>;
+//};
 
 // todo: find out why this doesn't stick after moving to a layer (e.g. _)
 &caps_word {
@@ -62,29 +62,29 @@
                 default_layer {
                         label = "Workman";
 // -----------------------------------------------------------------------------------------
-// | ESC  |  Q  |  D  |  R  |  W  |  B  |    |  J  |  F   |  U  |  P  |  ;  | BKSP |
-// | TAB  |  A  |  S  |  H  |  T  |  G  |    |  Y  |  N   |  E  |  O  |  I  | INS  |
-// | CAPS |  Z  |  X  |  M  |  C  |  V  |    |  K  |  L   |  ,  |  .  |  /  | APP  |
-//              | GUI | LCTRL | SYM/ENT |    | FUN/SPC | LSHFT  | ALT |
+// | ESC  |  Q  |  D  |  R  |  W  |  B  |    |  J  |  F  |  U  |  P  |  ;  | BKSP |
+// | TAB  |  A  |  S  |  H  |  T  |  G  |    |  Y  |  N  |  E  |  O  |  I  | INS  |
+// | CAPS |  Z  |  X  |  M  |  C  |  V  |    |  K  |  L  |  ,  |  .  |  /  | APP  |
+    //                | GUI | RET | SYM |    | FUN | SPC | ALT |
                         bindings = <
    &kp ESC    &kp Q &kp D &kp R &kp W &kp B                          &kp J &kp F  &kp U     &kp P   &kp SEMI &kp BSPC
    &kp TAB    &hm LGUI A &hm LALT S &hm LCTRL H &hm LSHFT T &kp G    &kp Y &hm RSHFT N  &hm RCTRL E &hm RALT O &hm RGUI I &kp INS
    &caps_word &kp Z &kp X &kp M &kp C &kp V                          &kp K &kp L  &kp COMMA &kp DOT &kp FSLH &kp K_APP
-                                  &kp LGUI &kp LCTRL  &lt SYM RET    &lt FUN SPACE &kp LSHFT &kp RALT
+                                  &kp LGUI &kp RET  &mo SYM          &mo FUN  &kp SPACE &kp RALT
                         >;
                 };
                 symbol_layer {
                         label = "Symbol";
 // -----------------------------------------------------------------------------------------
 // | ESC  | ` | # | * | { | } |    | ! |  7  |  8  |  9  |   | DEL |
-// | TAB  | & | ' | - | ( | ) |    | $ |  4  |  5  |  6  | 0 | INS |
-// | CAPS | ^ | % | @ | [ | ] |    | = |  1  |  2  |  3  | \ | APP |
-//          | GUI | LCTRL |   |    |  0  | LSHFT | ALT |
+// | TAB  | ' | - | = | ( | ) |    | $ |  4  |  5  |  6  | 0 | INS |
+// | CAPS | ^ | % | @ | [ | ] |    | & |  1  |  2  |  3  | \ | APP |
+//          | GUI | RET | SYM |    | FUN | 0 | ALT |
                         bindings = <
-   &trans &kp GRAVE &kp HASH  &kp ASTRK &kp LBRC &kp RBRC                           &kp EXCL &kp KP_N7   &kp KP_N8 &kp KP_N9 &none     &kp DEL
-   &trans &hm LGUI AMPS &hm LALT SQT &hm LCTRL MINUS &hm LSHFT LPAR &kp RPAR        &kp DLLR  &hm RSHFT KP_N4 &hm RCTRL KP_N5 &hm RALT KP_N6 &hm RGUI KP_N0 &trans
-   &trans &kp CARET &kp PRCNT &kp AT    &kp LBKT &kp RBKT                           &kp EQUAL &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp BSLH  &trans
-                                                        &trans    &trans &trans     &lt FUN KP_N0     &trans   &trans
+   &trans &kp GRAVE &kp HASH  &kp ASTRK &kp LBRC &kp RBRC                           &kp EXCL &kp KP_N7   &kp KP_N8 &kp KP_N9 &trans     &kp DEL
+   &trans &hm LGUI SQT &hm LALT MINUS &hm LCTRL EQUAL &hm LSHFT LPAR &kp RPAR       &kp DLLR  &hm RSHFT KP_N4 &hm RCTRL KP_N5 &hm RALT KP_N6 &hm RGUI KP_N0 &trans
+   &trans &kp CARET &kp PRCNT &kp AT    &kp LBKT &kp RBKT                           &kp AMPS &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp BSLH  &trans
+                                                        &trans    &trans &trans     &trans      &kp KP_N0   &trans
                         >;
                 };
 
@@ -94,7 +94,7 @@
 // | ESC  | F9 | F10 | F11 | F12 | NEXT |    | VOLUP | PGUP |  UP  |  PGDN  |     | BKSP |
 // | TAB  | F5 | F6  | F7  | F8  | PP   |    | MUTE  | LEFT |  DN  |  RIGHT |     | INS  |
 // | CAPS | F1 | F2  | F3  | F4  | PREV |    | VOLDN | HOME |      |  END   |     | APP  |
-//                  | GUI | LCTRL | ENT |    |   | LSHFT | ALT |
+//                    | GUI | RET | SYM |    | FUN | SPC | ALT |
                         bindings = <
    &trans   &kp F9 &kp F10 &kp F11 &kp F12 &kp C_NEXT                        &kp C_VOL_UP &kp PG_UP &kp UP   &kp PG_DN &none &trans
    &trans   &hm LGUI F5 &hm LALT F6 &hm LCTRL F7 &hm LSHFT F8  &kp C_PP      &kp C_MUTE   &hm RSHFT LEFT &hm RCTRL DOWN &hm RALT RIGHT &kp RGUI &trans
@@ -109,11 +109,11 @@
 // |  |  |  |  |  |  |    |       | RST | BOOT | OUT |     |     |
 // |  |  |  |  |  |  |    | BTCLR | BT1 | BT2  | BT3 | BT4 | BT5 |
 // |  |  |  |  |  |  |    |       |     |      |     |     |     |
-//     | GUI | LCTRL |    |    |   | LSHFT | ALT |
+// | GUI | RET | SYM |    | FUN | SPC | ALT |
                         bindings = <
-   &kp C_PWR        &none &none &none &none &none    &none &reset &bootloader &out OUT_TOG &none &none
-   &kp C_SLEEP      &none &none &none &none &none    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-   &kp SYS_SLEEP &none &none &none &none &none    &none &none &none &none &none &none
+   &kp LANG_KATAKANA        &none &none &none &none &none    &none &reset &bootloader &out OUT_TOG &none &none
+   &kp LANG_HIRAGANA      &none &none &none &none &none    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+   &kp INT_KPJPCOMMA &none &none &none &none &none       &none &none &none &none &none &none
                             &trans &trans   &none     &none   &trans  &trans
                         >;
                 };
