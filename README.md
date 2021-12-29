@@ -30,6 +30,7 @@ To locate your firmware files...
 Your keyboard is now ready to use.
 
 # Workman Layout
+![Workman layout](workman.png)
 
 ## Features
 ### Homerow Mods
