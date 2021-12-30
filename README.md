@@ -1,5 +1,5 @@
 # Workman Layout
-![Workman layout](workman.png)
+![Workman layout](cornish-zen-workman.png)
 
 ## Features
 ### Homerow Mods
