@@ -1,3 +1,23 @@
+# Workman Layout
+![Workman layout](workman.png)
+
+## Features
+### Homerow Mods
+GACS-style [homerow mods](https://precondition.github.io/home-row-mods) allow for one-handed:
+* select-all
+* cut
+* copy
+* paste
+* undo
+* save
+
+### Navigation
+* One-handed arrow keys
+* One-handed volume
+
+## Notes
+* Holding momentary layer keys causes less strain on positions 37 & 40 than 38 & 39 (1.5u).
+
 # Corne-ish Zen Custom Configuration
 
 ![Corne-ish Zen Logo](zenlogo.png)
@@ -29,19 +49,3 @@ To locate your firmware files...
 
 Your keyboard is now ready to use.
 
-# Workman Layout
-![Workman layout](workman.png)
-
-## Features
-### Homerow Mods
-GACS-style [homerow mods](https://precondition.github.io/home-row-mods) allow for one-handed
-* select-all
-* cut
-* copy
-* paste
-* undo
-* save
-
-### Navigation
-* One-handed arrow keys
-* One-handed volume

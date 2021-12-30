@@ -69,7 +69,7 @@
    &kp ESC    &kp Q &kp D &kp R &kp W &kp B                          &kp J &kp F  &kp U     &kp P   &kp SEMI &kp DEL
    &kp TAB    &hm LGUI A &hm LALT S &hm LCTRL H &hm LSHFT T &kp G    &kp Y &hm RSHFT N  &hm RCTRL E &hm RALT O &hm RGUI I &kp INS
    &caps_word &kp Z &kp X &kp M &kp C &kp V                          &kp K &kp L  &kp COMMA &kp DOT &kp FSLH &kp K_APP
-                                  &kp LGUI &kp RET  &mo SYM          &mo FUN  &kp SPACE &kp BSPC
+                                    &kp LGUI &mo SYM &kp RET         &kp SPACE &mo FUN &kp BSPC
                         >;
                 };
                 symbol_layer {
@@ -83,7 +83,7 @@
    &trans &kp GRAVE &kp HASH  &kp ASTRK &kp LBRC &kp RBRC                           &kp EXCL &kp KP_N7   &kp KP_N8 &kp KP_N9 &kp PIPE  &trans
    &trans &hm LGUI SQT &hm LALT MINUS &hm LCTRL EQUAL &hm LSHFT LPAR &kp RPAR       &kp DLLR  &hm RSHFT KP_N4 &hm RCTRL KP_N5 &hm RALT KP_N6 &hm RGUI KP_N0 &trans
    &trans &kp CARET &kp PRCNT &kp AT    &kp LBKT &kp RBKT                           &kp AMPS &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp BSLH  &trans
-                                                        &trans    &trans &trans     &trans      &kp KP_N0   &trans
+                                                        &trans    &trans &trans     &kp KP_N0 &trans &trans
                         >;
                 };
 
