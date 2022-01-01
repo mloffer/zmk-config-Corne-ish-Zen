@@ -62,12 +62,12 @@
                         label = "Workman";
 // -----------------------------------------------------------------------------------------
 // | ESC  |  Q  |  D  |  R  |  W  |  B  |    |  J  |  F  |  U  |  P  |  ;  | BKSP |
-// | TAB  |  A  |  S  |  H  |  T  |  G  |    |  Y  |  N  |  E  |  O  |  I  | INS  |
+// | TAB  |  A  |  S  |  H  |  T  |  G  |    |  Y  |  N  |  E  |  O  |  I  | RET  |
 // | CAPS |  Z  |  X  |  M  |  C  |  V  |    |  K  |  L  |  ,  |  .  |  /  | APP  |
     //                | GUI | RET | SYM |    | FUN | SPC | ALT |
                         bindings = <
    &kp ESC    &kp Q &kp D &kp R &kp W &kp B                          &kp J &kp F  &kp U     &kp P   &kp SEMI &kp DEL
-   &kp TAB    &hm LGUI A &hm LALT S &hm LCTRL H &hm LSHFT T &kp G    &kp Y &hm RSHFT N  &hm RCTRL E &hm RALT O &hm RGUI I &kp INS
+   &kp TAB    &hm LGUI A &hm LALT S &hm LCTRL H &hm LSHFT T &kp G    &kp Y &hm RSHFT N  &hm RCTRL E &hm RALT O &hm RGUI I &kp RET
    &caps_word &kp Z &kp X &kp M &kp C &kp V                          &kp K &kp L  &kp COMMA &kp DOT &kp FSLH &kp K_APP
                                     &kp LGUI &mo SYM &kp RET         &kp SPACE &mo FUN &kp BSPC
                         >;
@@ -75,14 +75,14 @@
                 symbol_layer {
                         label = "Symbol";
 // -----------------------------------------------------------------------------------------
-// | ESC  | ` | # | * | { | } |    | ! |  7  |  8  |  9  | | | DEL |
-// | TAB  | ' | - | = | ( | ) |    | $ |  4  |  5  |  6  | 0 | INS |
-// | CAPS | ^ | % | @ | [ | ] |    | & |  1  |  2  |  3  | \ | APP |
+// | ESC  | ` | # | * | [ | ] |    | ! |  7  |  8  |  9  | | | DEL |
+// | TAB  | ' | - | = | ( | ) |    | $ |  4  |  5  |  6  | + | RET |
+// | CAPS | ^ | % | @ | { | } |    | & |  1  |  2  |  3  | / |  \  |
 //          | GUI | RET | SYM |    | FUN | 0 | ALT |
                         bindings = <
-   &trans &kp GRAVE &kp HASH  &kp ASTRK &kp LBRC &kp RBRC                           &kp EXCL &kp KP_N7   &kp KP_N8 &kp KP_N9 &kp PIPE  &trans
-   &trans &hm LGUI SQT &hm LALT MINUS &hm LCTRL EQUAL &hm LSHFT LPAR &kp RPAR       &kp DLLR  &hm RSHFT KP_N4 &hm RCTRL KP_N5 &hm RALT KP_N6 &hm RGUI KP_N0 &trans
-   &trans &kp CARET &kp PRCNT &kp AT    &kp LBKT &kp RBKT                           &kp AMPS &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp BSLH  &trans
+   &trans &kp GRAVE &kp HASH  &kp ASTRK &kp LBKT &kp RBKT                           &kp EXCL &kp KP_N7   &kp KP_N8 &kp KP_N9 &kp PIPE  &trans
+   &trans &hm LGUI SQT &hm LALT MINUS &hm LCTRL EQUAL &hm LSHFT LPAR &kp RPAR       &kp DLLR  &hm RSHFT KP_N4 &hm RCTRL KP_N5 &hm RALT KP_N6 &hm RGUI PLUS &trans
+   &trans &kp CARET &kp PRCNT &kp AT    &kp LBRC &kp RBRC                           &kp AMPS &kp KP_N1   &kp KP_N2 &kp KP_N3 &trans &kp BSLH
                                                         &trans    &trans &trans     &kp KP_N0 &trans &trans
                         >;
                 };
