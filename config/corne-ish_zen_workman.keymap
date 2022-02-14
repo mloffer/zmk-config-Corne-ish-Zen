@@ -44,6 +44,24 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
+
+            // allow locking layer with shift
+            ls: symbol_layer {
+                compatible = "zmk,behavior-mod-morph";
+                label = "SYMBOL_LAYER";
+                #binding-cells = <0>;
+                // Mod morph doesn't seem to support bindings?
+                bindings = <&mo SYM>, <&to SYM>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            // allow locking layer with shift
+            lf: function_layer {
+                compatible = "zmk,behavior-mod-morph";
+                label = "FUNCTION_LAYER";
+                #binding-cells = <0>;
+                bindings = <&mo FUN>, <&to FUN>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
         };
 
         conditional_layers {
@@ -68,7 +86,7 @@
    &kp ESC    &kp Q &kp D &kp R &kp W &kp B                          &kp J &kp F  &kp U     &kp P   &kp SEMI &kp DEL
    &kp TAB    &hm LGUI A &hm LALT S &hm LCTRL H &hm LSHFT T &kp G    &kp Y &hm RSHFT N  &hm RCTRL E &hm RALT O &hm RGUI I &kp RET
    &caps_word &kp Z &kp X &kp M &kp C &kp V                          &kp K &kp L  &kp COMMA &kp DOT &kp FSLH &kp K_APP
-                                    &kp LGUI &mo SYM &kp RET         &kp SPACE &mo FUN &kp BSPC
+                                    &kp LGUI &ls &kp RET         &kp SPACE &lf &kp BSPC
                         >;
                 };
                 symbol_layer {
