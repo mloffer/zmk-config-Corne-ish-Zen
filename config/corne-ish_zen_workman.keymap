@@ -28,7 +28,6 @@
 //    quick_tap_ms = <200>;
 //};
 
-// todo: find out why this doesn't stick after moving to a layer (e.g. _)
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
 };
@@ -92,13 +91,13 @@
             label = "Symbol";
 // -----------------------------------------------------------------------------------------
 // | ESC | ~ | # | * | [ | ] |    | \ |  !  |  `  |  "  | ' | DEL |
-// | TAB | $ | | | = | ( | ) |    | . |  _  |  :  |  ;  | + | RET |
-// | CPS | ^ | % | @ | { | } |    | & |  -  |  <  |  >  | ? | APP |
+// | TAB | $ | | | = | ( | ) |    | . |  :  |  -  |  _  | + | RET |
+// | CPS | ^ | % | @ | { | } |    | & |  ;  |  <  |  >  | ? | APP |
 //          | NUM | SYM | RET |    | SPC | FUN | BSPC |
             bindings = <
 &trans &kp TILDE &kp HASH  &kp ASTRK &kp LBKT &kp RBKT                           &kp BSLH &kp EXCL        &kp GRAVE       &kp DQT &trans  &trans
-&trans &hm LGUI DLLR &hm LALT PIPE &hm LCTRL EQUAL &hm LSHFT LPAR &kp RPAR       &kp DOT &hm RSHFT UNDER &hm RCTRL COLON &hm RALT SEMI &hm RGUI PLUS &trans
-&trans &kp CARET &kp PRCNT &kp AT    &kp LBRC &kp RBRC                           &kp AMPS &kp MINUS        &kp LT          &kp GT  &kp QMARK &trans
+&trans &hm LGUI DLLR &hm LALT PIPE &hm LCTRL EQUAL &hm LSHFT LPAR &kp RPAR       &kp DOT &hm RSHFT COLON &hm RCTRL MINUS &hm RALT UNDER &hm RGUI PLUS &trans
+&trans &kp CARET &kp PRCNT &kp AT    &kp LBRC &kp RBRC                           &kp AMPS &kp SEMI        &kp LT          &kp GT  &kp QMARK &trans
                                             &trans    &trans &trans     &trans &trans &trans
             >;
         };
