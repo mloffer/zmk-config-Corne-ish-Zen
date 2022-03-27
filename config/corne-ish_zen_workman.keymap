@@ -129,8 +129,8 @@
         function_layer {
             label = "FUNC";
 // -----------------------------------------------------------------------------------------
-// | ESC  | F9 | F10 | F11 | F12 | NEXT |     | VOLUP | PGUP |  UP  |  PGDN  |     | DEL |
-// | TAB  | F5 | F6  | F7  | F8  | PP   |     | MUTE  | LEFT |  DN  |  RIGHT | GUI | RET |
+// | ESC  | F9 | F10 | F11 | F12 | NEXT |     | VOLUP | PGUP |  UP  |  PGDN  |     |  ⌦  |
+// | TAB  | F5 | F6  | F7  | F8  | PP   |     | MUTE  | LEFT |  DN  |  RIGHT | GUI |  ⏎  |
 // | CAPS | F1 | F2  | F3  | F4  | PREV |     | VOLDN | HOME |      |  END   |     | APP |
 //                    | NUM | SYM | RET |     | SPC | FUN | BSPC |
             bindings = <
