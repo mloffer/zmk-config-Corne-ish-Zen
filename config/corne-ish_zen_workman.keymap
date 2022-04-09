@@ -47,26 +47,25 @@
 
         // allow locking layer with shift
         sym: symbol_layer {
-            compatible = "zmk,behavior-mod-morph";
+            compatible = "zmk,behavior-tap-dance";
             label = "SYMBOL_LAYER";
             #binding-cells = <0>;
-            // Mod morph doesn't seem to support bindings?
+            tapping-term-ms = <200>;
             bindings = <&mo SYM>, <&to SYM>;
-            mods = <(MOD_LALT|MOD_RALT)>;
         };
         fun: function_layer {
-            compatible = "zmk,behavior-mod-morph";
+            compatible = "zmk,behavior-tap-dance";
             label = "FUNCTION_LAYER";
             #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&mo FUN>, <&to FUN>;
-            mods = <(MOD_LALT|MOD_RALT)>;
         };
         num: numpad_layer {
-            compatible = "zmk,behavior-mod-morph";
+            compatible = "zmk,behavior-tap-dance";
             label = "NUMPAD_LAYER";
             #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&mo NUM>, <&to NUM>;
-            mods = <(MOD_LALT|MOD_RALT)>;
         };
     };
 
