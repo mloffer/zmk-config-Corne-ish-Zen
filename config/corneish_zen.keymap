@@ -1,6 +1,7 @@
 /*
 *
-* Micah Loffer <micah.loffer@protonmail.com>
+* Micah Loffer <micah.loffer@pm.com>
+* For Corneish Zen v2
 *
 */
 
@@ -34,6 +35,12 @@
 };
 
 / {
+    chosen {
+        zmk,matrix_transform = &default_transform;
+    };
+};
+
+/ {
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -45,7 +52,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        // allow locking layer with shift
+        // allow locking layer with double tap
         sym: symbol_layer {
             compatible = "zmk,behavior-tap-dance";
             label = "SYMBOL_LAYER";
@@ -148,7 +155,7 @@
 // |     |     |     |     |     |     |    |     |     |     |     |     |     |
 //                   | NUM | SYM | RET |    | SPC | FUN | BSPC |
             bindings = <
-&none &none &none &none &none &none   &none &bootloader &reset &out OUT_TOG &none &none
+&none &none &none &none &none &none   &none &bootloader &sys_reset &out OUT_TOG &none &none
 &none &none &none &none &none &none   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 &none &none &none &none &none &none   &none &none &none &none &none &none
                &trans &trans &trans   &trans &trans &trans
